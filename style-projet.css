@@ -1,0 +1,279 @@
+  body {
+    font-family: Arial, sans-serif; 
+    margin: 0; 
+    background: #f6f6f6; 
+    color: #000;
+  }
+
+  .wrap {
+    max-width: 900px; 
+    margin: auto; 
+    padding: 20px;
+  }
+
+  h1 {font-size: 26px;}
+  .branch {
+    background: #fff; 
+    border: 1px solid #ccc; 
+    border-radius: 8px; 
+    margin-bottom: 10px;
+  }
+  
+  .head {
+    cursor: pointer; 
+    padding: 10px; 
+    font-weight: bold; 
+    border-bottom: 1px solid #ccc;
+  }
+
+  .children {
+    display: none; 
+    padding: 10px;
+  }
+
+  .point-link {
+    cursor: pointer; 
+    color: rgb(7, 48, 163); 
+    text-decoration:none;
+  }
+
+  .backdrop {
+    position: fixed; 
+    inset: 0; 
+    background: rgba(0,0,0,0.5); 
+    display: none; align-items: 
+    center; justify-content: 
+    center;
+  }
+
+  .modal {
+    background: #fff; 
+    border-radius: 8px; 
+    max-width: 800px; width: 90%; 
+    max-height: 90%; display: flex; 
+    flex-direction: column;
+  }
+
+  .modal-hd {
+    display: flex; 
+    justify-content: 
+    space-between; 
+    align-items: center; 
+    padding: 10px; 
+    border-bottom: 1px solid #ccc;
+  }
+
+  .modal-bd {
+    padding: 10px; 
+    overflow-y: auto;
+  }
+
+  .print-footer {
+    display: block;
+    position: fixed;
+    bottom: 0;
+    right: 18mm;
+    font-size: 9pt;
+    text-align: right;
+    color: #888;
+  }  
+
+  #modalBody {
+    background: #f0f0f0; /* gris clair autour de la fiche */
+    padding: 60px;         /* espace autour de l'article à l'intérieur de la modale */
+  }
+
+  /* Justification également à l'écran */
+  #modalBody p,
+  #modalBody li {
+    text-align: justify;
+    hyphens: auto;
+  }
+
+  #modalBody p {
+  line-height: 1.6;
+  margin-bottom: 1em;
+  }
+
+  #modalBody h3 {
+    margin-bottom: 6px; /* plus serré qu’un h3 par défaut (~16px)               nouveau*/
+    margin-top: 40px;
+  }
+
+  #modalBody section {
+  #modalBody article {
+    max-width: 700px;            /* largeur globale réduite */
+    margin: auto;
+    padding: 24px 48px;          /* ⬅️ marges internes ↑ */
+    background: #fff;
+    border-radius: 8px;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+    text-align: justify;         /* ⬅️ justifie le texte */
+  }
+  }
+
+.head {
+  cursor: pointer;
+  padding: 6px 10px;         /* Réduit le padding vertical (avant : 10px) */
+  font-weight: bold;
+  border-bottom: 1px solid #ccc;
+  margin-bottom: 0px;        /* Réduit l’espace après le titre */
+}
+
+.children ul {
+  list-style: disc inside;
+  margin: 0 0 0 18px;        /* Supprime la marge verticale inutile */
+  padding: 0;
+}
+
+.children li {
+  margin: 0 0;             /* Réduit l’espace entre les lignes */
+  line-height: 1.0;          /* Resserre encore l’espacement */
+}
+
+.point-link {
+  text-decoration: none;
+  color: rgb(7, 48, 163);
+}
+
+.point-link {
+  display: inline-block;
+  margin: 6px 0; /* haut / bas */
+}
+
+.btn {
+  font-size: 14px;
+  font-weight: 500;
+  padding: 6px 12px;
+  margin: 4px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  background: #f9f9f9;
+  color: #222;
+  cursor: pointer;
+  transition: background 0.2s ease, box-shadow 0.2s ease;
+}
+
+.btn:hover {
+  background: #eaeaea;
+  box-shadow: 0 1px 3px rgba(0,0,0,0.1);
+}
+
+.btn:hover {
+  background: #eaeaea;
+  box-shadow: 0 1px 3px rgba(0,0,0,0.1);
+}
+
+.btn-primary {
+  background-color: #333;
+  color: #fff;
+}
+
+.btn-primary:hover {
+  background-color: #000;
+  box-shadow: 0 0 0 2px #0003;
+}
+
+.btn-secondary {
+  background-color: #e0e0e0;
+  color: #333;
+}
+
+.btn-secondary:hover {
+  background-color: #ccc;
+  box-shadow: 0 0 0 2px #9993;
+}
+
+.btn-icon {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 14px;
+  padding: 6px 12px;
+  background-color: #f0f0f0;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: background 0.2s;
+}
+
+.btn-icon:hover {
+  background-color: #e0e0e0;
+}
+
+.btn-icon:active {
+  background-color: #d0d0d0;
+}
+
+/* svg disponible pour navigateur compatible HTML5+ */
+.btn-svg {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 14px;
+  padding: 6px 12px;
+  background-color: #f8f8f8;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: background 0.2s;
+  color: #222;
+}
+
+.btn-svg:hover {
+  background-color: #e0e0e0;
+}
+
+.btn-svg svg {
+  margin-right: 6px;
+  vertical-align: middle;
+}
+/* svg disponible pour navigateur compatible HTML5+ */
+
+@media print {
+  /* 1) Marges papier */
+  @page { size: A4; margin: 25mm 14mm 14mm 14mm; } /* haut, droite, bas, gauche */
+
+  /* 2) Pagination OK */
+  html, body { height: auto !important; overflow: visible !important; }
+
+  /* 3) Ne garder QUE #print-area dans le flux :
+        - on cache tous les enfants directs de <body>
+        - puis on réactive #print-area */
+  body > * { display: none !important; }           /* retire tout du flux */
+  #print-area { display: block !important; }       /* réactive la zone d'impression */
+  #print-area * { visibility: visible !important; }/* évite des héritages indésirables */
+
+  /* 4) #print-area doit se comporter comme un bloc normal qui pagine */
+  #print-area {
+    position: static !important;                   /* surtout pas fixed */
+    margin: 0 !important;
+    padding: 0 !important;
+    width: auto !important;
+    max-height: none !important;
+    overflow: visible !important;
+    background: #fff !important;
+  }
+
+  /* 5) Contenu : typographie + zéro marge en haut sur le premier élément */
+  #print-area article {
+    font-size: 12pt;
+    line-height: 1.5;
+    color: #000;
+    padding-bottom: 32mm;                          /* réserve si footer fixe */
+    margin-top: 32mm !important;
+    
+  }
+  #print-area > :first-child,
+  #print-area h1:first-child,
+  #print-area h2:first-child { margin-top: 0 !important; }
+
+  /* 6) Titres / paragraphes */
+  #print-area h1, #print-area h2 { text-align: center; font-weight: 800; margin: 0 0 8pt; }
+  #print-area h3 { font-size: 12.5pt; margin: 12pt 0 6pt; }
+  #print-area p, #print-area li { text-align: justify; widows: 2; orphans: 2; hyphens: auto; }
+  #print-area img, #print-area figure { max-width: 100%; height: auto; page-break-inside: avoid; break-inside: avoid; }
+
+  /* 7) Saut de page utilitaire */
+  #print-area .page-break { break-before: page; page-break-before: always; }
+}
