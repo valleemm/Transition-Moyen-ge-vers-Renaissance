@@ -56,9 +56,9 @@
 
   .modal-hd {
     display: flex; 
-    justify-content: 
-    space-between; 
+    justify-content: space-between; 
     align-items: center; 
+    gap: 8px;
     padding: 10px; 
     border-bottom: 1px solid #ccc;
   }
@@ -81,6 +81,17 @@
   #modalBody {
     background: #f0f0f0; /* gris clair autour de la fiche */
     padding: 60px;         /* espace autour de l'article à l'intérieur de la modale */
+  }
+
+  #modalTitle {
+    flex: 1;
+    font-weight: bold;
+    font-size: 16px;
+    min-width: 200px;
+    max-width: 100%;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
   }
 
   /* Justification également à l'écran */
